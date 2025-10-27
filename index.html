@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Photography Portfolio</title>
+    <style>
+        /* Base styles (mobile-first) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #2c5530;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 20px 0 15px;
+            color: #2c5530;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .intro {
+            background-color: #e8f4ea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        figure {
+            border: 2px solid #7aa37e;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+        
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            text-align: center;
+            color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #2c5530;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        /* Tablet view (772px and up) */
+        @media (min-width: 772px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            
+            figure {
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            
+            figure:last-child {
+                grid-column: 1 / span 2;
+                border-radius: 8px;
+            }
+            
+            img {
+                border-radius: 0;
+            }
+        }
+        
+        /* Large screen view (992px and up) */
+        @media (min-width: 992px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+            figure {
+                border-radius: 8px;
+            }
+            
+            figure:nth-child(3n) {
+                grid-column: 1 / span 3;
+            }
+            
+            figure:last-child {
+                grid-column: auto;
+            }
+        }
+        
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            
+            figure {
+                transition: none;
+            }
+        }
+        
+        /* Dark color scheme */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            
+            header, footer {
+                background-color: #0f2d13;
+            }
+            
+            h2 {
+                color: #7aa37e;
+            }
+            
+            .intro {
+                background-color: #2a2a2a;
+            }
+            
+            figure {
+                background-color: #2d2d2d;
+                border-color: black;
+                color: #f0e68c; /* Yellow-ish color */
+            }
+            
+            figcaption {
+                color: #f0e68c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wildlife Photography Portfolio</h1>
+        <p>Capturing the beauty of nature</p>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>About My Work</h2>
+            <p>Welcome to my wildlife photography portfolio. For over a decade, I've traveled to remote corners of the world to capture intimate moments with nature's most fascinating creatures. My approach focuses on ethical wildlife photography that respects animal habitats and behaviors while showcasing their unique personalities and interactions.</p>
+            <p>Each photograph tells a story of survival, adaptation, and the delicate balance of ecosystems. From the dense rainforests of Costa Rica to the frozen landscapes of Antarctica, I strive to document the incredible diversity of life on our planet. My work has been featured in National Geographic, BBC Wildlife, and Conservation International.</p>
+        </section>
+        
+        <section class="gallery">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Majestic lion resting in the savannah">
+                <figcaption>Majestic lion resting in the savannah</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Colorful macaw perched on a branch in the rainforest">
+                <figcaption>Colorful macaw in the rainforest</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Polar bear walking across Arctic ice">
+                <figcaption>Polar bear traversing Arctic ice</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="voi.jpg  " alt="Elephant family at a watering hole" >
+                <figcaption>Elephant family at a watering hole</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Penguins huddling together in Antarctica">
+                <figcaption>Penguins huddling in Antarctica</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="tiger.webp" alt="Tiger moving through tall grass">
+                <figcaption>Tiger moving through tall grass</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1551085254-e96b210db58a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dolphins swimming in clear blue ocean">
+                <figcaption>Dolphins swimming in clear ocean waters</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Colorful parrot displaying vibrant feathers">
+                <figcaption>Colorful parrot displaying vibrant feathers</figcaption>
+            </figure>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Wildlife Photography Portfolio | All rights reserved</p>
+        <p>Follow me on social media for daily wildlife updates</p>
+    </footer>
+</body>
+</html>
